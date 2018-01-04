@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import './StoreFront.css';
 import { connect } from 'react-redux';
+
 import { addToShoppingCart, getAllProducts } from '../../redux/reducer';
+
+import './StoreFront.css';
 
 class StoreFront extends Component {
 
@@ -31,6 +33,7 @@ class StoreFront extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log(this.state);
     return {
         products: state.products,
         loading: state.loading,
